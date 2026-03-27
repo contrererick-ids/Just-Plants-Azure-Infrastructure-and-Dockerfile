@@ -13,7 +13,7 @@ jobs:
       - name: Check secret exists
         run: |
           if [ -z "${{ secrets.AZURE_PUBLISH_PROFILE }}" ]; then
-            echo "SECRET ESTÁ VACÍO"
+            echo "SECRET ESTÁ VACÍO TODAVÍA"
           else
             echo "SECRET tiene contenido"
           fi
