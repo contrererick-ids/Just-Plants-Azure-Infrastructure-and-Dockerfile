@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build Docker Image
-        run: docker build -t just-plants-app-service .
+        run: docker build -t just-plants-web-app .
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: ${{ secrets.AZURE_APP_NAME }} // Falta configurar en secrets
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }} // Falta configurar en secrets
+          app-name: ${{ secrets.AZURE_APP_NAME }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
